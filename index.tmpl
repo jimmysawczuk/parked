@@ -1,0 +1,21 @@
+{{- $domain := env "DOMAIN" -}}
+{{- if eq $domain "" }}{{ $domain = "example.com" }}{{ end -}}
+
+<!doctype html>
+<html>
+	<head>
+		<title>{{ $domain }} is parked</title>
+		<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+		<link href="style.less" rel="stylesheet" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	<body>
+		<div id="text">Now<br />Brewing</div>
+		<div id="credit">
+			<i class="fa fa-camera-retro"></i>
+			<a href="https://unsplash.com/photos/7vb8YRXPdOQ" rel="noopener noreferrer" target="_blank">Hans Ripa</a>
+		</div>
+
+		<script src="./app.js"></script>
+	</body>
+</html>
