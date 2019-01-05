@@ -1,3 +1,6 @@
+include .env
+export $(shell sed 's/=.*//' .env)
+
 default: dev
 
 clean:
@@ -12,6 +15,7 @@ production: clean
 	parcel build index.html
 
 deploy: production
-	AWS_PROFILE=jsawczuk aws s3 sync --acl=public-read --delete dist s3://${DOMAIN}
+	cp _headers dist
+	netlify deploy -p -s ${NETLIFY_SITE_ID} -d dist
 
-.PHONY: dev
+.PHONY: dev clean
