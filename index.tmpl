@@ -1,13 +1,15 @@
 {{- $domain := env "DOMAIN" -}}
 {{- if eq $domain "" }}{{ $domain = "example.com" }}{{ end -}}
 
-<!doctype html>
+<!DOCTYPE html>
 <html>
 	<head>
 		<title>{{ $domain }} is parked</title>
-		<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
-		<link href="style.less" rel="stylesheet" />
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<script src="/app.js" defer></script>
+		<link href="/style.less" rel="stylesheet" />
 	</head>
 	<body>
 		<div id="text">Now<br />Brewing</div>
@@ -16,6 +18,10 @@
 			<a href="https://unsplash.com/photos/7vb8YRXPdOQ" rel="noopener noreferrer" target="_blank">Hans Ripa</a>
 		</div>
 
-		<script src="./app.js"></script>
+		<script>
+			document.addEventListener("DOMContentLoaded", function() {
+				api.init()
+			})
+		</script>
 	</body>
 </html>

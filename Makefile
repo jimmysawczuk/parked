@@ -8,11 +8,11 @@ clean:
 
 dev:
 	tmpl -o index.html index.tmpl
-	parcel index.html
+	parcel --global api index.html
 
 production: clean
 	DOMAIN=${DOMAIN} tmpl -o index.html index.tmpl
-	parcel build index.html
+	parcel build --experimental-scope-hoisting --global api index.html
 
 deploy: production
 	cp _headers dist

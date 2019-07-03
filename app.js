@@ -3,4 +3,6 @@ import { faCameraRetro } from "@fortawesome/free-solid-svg-icons"
 
 library.add(faCameraRetro)
 
-dom.watch()
+export function init() {
+	dom.i2svg()
+}
