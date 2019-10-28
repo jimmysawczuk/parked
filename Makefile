@@ -4,7 +4,7 @@ export $(shell sed 's/=.*//' .env)
 default: dev
 
 clean:
-	rm -rf dist .cache index.html
+	rm -rf dist .cache index.html .netlify
 
 dev:
 	tmpl -o index.html index.tmpl
