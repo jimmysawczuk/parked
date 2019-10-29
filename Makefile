@@ -12,7 +12,7 @@ dev:
 
 production: clean
 	DOMAIN=${DOMAIN} tmpl -o index.html index.tmpl
-	parcel build --experimental-scope-hoisting --global api index.html
+	yarn production
 
 deploy: production
 	cp _headers dist
