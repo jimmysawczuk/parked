@@ -14,6 +14,8 @@ const config = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "[name].js",
+    library: "api",
+    libraryTarget: "window",
   },
   module: {
     rules: [

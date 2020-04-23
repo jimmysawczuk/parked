@@ -37,9 +37,11 @@ body {
 
 #credit {
   position: absolute;
-  bottom: 1em;
-  right: 1em;
+  bottom: 0;
+  right: 0;
   color: #f9f9f9;
+  background: fadeOut(#222, 10%);
+  padding: 0.5em;
 
   a {
     &:link,
@@ -48,7 +50,11 @@ body {
     &:hover {
       color: #f9f9f9;
       text-decoration: underline;
-    }
+	}
+
+	.svg-inline--fa {
+		margin-right: 0.25em;
+	}
 
     &:hover {
       text-decoration: none;
