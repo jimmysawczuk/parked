@@ -20,14 +20,14 @@
     "optimize-css-assets-webpack-plugin": "^5.0.3",
     "postcss-loader": "^3.0.0",
     "prettier": "^2.0.4",
-    "terser-webpack-plugin": "^2.3.6",
+    "terser-webpack-plugin": "^3.0.1",
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11"
   },
   "scripts": {
     "tmpl": "tmpl -o dist/index.html -fmt html -min index.tmpl",
     "dev": "webpack -w --mode=development",
-    "production": "webpack --mode=production",
+    "production": "webpack --mode=production && cp _headers dist",
     "prettier": "prettier --write *.js *.json *.less",
     "clean": "rm -rf dist .cache index.html .netlify"
   }
