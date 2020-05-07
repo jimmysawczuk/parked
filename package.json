@@ -25,7 +25,7 @@
     "webpack-cli": "^3.3.11"
   },
   "scripts": {
-    "tmpl": "tmpl -o dist/index.html -fmt html -min index.tmpl",
+    "tmpl": "tmpl -o dist/index.html -fmt html index.tmpl",
     "dev": "webpack -w --mode=development",
     "production": "webpack --mode=production && cp _headers dist",
     "prettier": "prettier --write *.js *.json *.less",
