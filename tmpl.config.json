@@ -1,0 +1,7 @@
+[
+  {
+    "in": "index.tmpl",
+    "out": "dist/index.html",
+    "format": "html"
+  }
+]
