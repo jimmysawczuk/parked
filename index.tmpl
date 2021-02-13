@@ -8,23 +8,15 @@
 		<title>{{ $domain }} is parked</title>
 		<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-
-		<script src="/app.js" defer></script>
 		<link href="/app.css" type="text/css" rel="stylesheet" />
 	</head>
 	<body>
 		<div id="text">Now<br />Brewing</div>
 		<div id="credit">
 			<a href="https://unsplash.com/photos/7vb8YRXPdOQ" rel="noopener noreferrer" target="_blank">
-				<i class="fad fa-camera-retro"></i>
+				{{ svg "./img/camera-retro-duotone.svg" -}}
 				Hans Ripa
 			</a>
 		</div>
-
-		<script>
-			document.addEventListener("DOMContentLoaded", function() {
-				api.init()
-			})
-		</script>
 	</body>
 </html>
