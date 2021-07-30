@@ -16,6 +16,7 @@ const config = {
     filename: "[name].js",
     library: "api",
     libraryTarget: "window",
+    assetModuleFilename: "[name][ext]",
   },
   devServer: {
     historyApiFallback: {
@@ -64,14 +65,7 @@ const config = {
       },
       {
         test: /\.(jpg)$/,
-        use: [
-          {
-            loader: "file-loader",
-            options: {
-              name: "[name].[ext]",
-            },
-          },
-        ],
+        type: "asset/resource",
       },
     ],
   },
