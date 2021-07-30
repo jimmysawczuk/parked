@@ -17,6 +17,14 @@ const config = {
     library: "api",
     libraryTarget: "window",
   },
+  devServer: {
+    historyApiFallback: {
+      index: "index.html",
+    },
+    contentBase: path.join(__dirname, "dist"),
+    hot: true,
+    overlay: true,
+  },
   module: {
     rules: [
       {
