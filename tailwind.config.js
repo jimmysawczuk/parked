@@ -1,9 +1,10 @@
-const defaultConfig = require("tailwindcss/defaultConfig")
 const colors = require("tailwindcss/colors")
 
 module.exports = {
   mode: "jit",
-  purge: ["dist/index.html"],
+  purge: {
+    content: ["./index.tmpl", "./dist/index.html", "./img/*.svg"],
+  },
   theme: {
     fontFamily: {
       script: ["Pacifico", "cursive"],
