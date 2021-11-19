@@ -8,15 +8,17 @@
 		<title>{{ $domain }} is parked</title>
 		<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link href="/app.css" type="text/css" rel="stylesheet" />
 		<link rel="icon" type="image/svg+xml" {{ printf "href=%q" "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><text x='0' y='14'>🚧</text></svg>" | safeHTMLAttr }} />
+		<style>
+			{{- file "./dist/app.css" | safeCSS -}}
+		</style>
 	</head>
-	<body>
-		<div id="text">Now<br />Brewing</div>
-		<div id="credit">
-			<a href="https://unsplash.com/photos/7vb8YRXPdOQ" rel="noopener noreferrer" target="_blank">
-				{{ svg "./img/camera-retro-duotone.svg" -}}
-				Hans Ripa
+	<body class="grid place-items-center bg-[#211511] min-h-screen" style="background-image: url('/img/bg.jpg')">
+		<div class="font-script text-8xl md:text-[10rem] text-gray-50 leading-none text-center text-shadow-glow">Now<br />Brewing</div>
+		<div class="absolute right-0 bottom-0 p-2 bg-[#211511] rounded-tl-md">
+			<a href="https://unsplash.com/photos/7vb8YRXPdOQ" rel="noopener noreferrer" target="_blank" class="text-gray-50 border-b border-transparent hover:border-gray-50 transition-colors">
+				<span class="inline-block mr-2">{{ svg "./img/camera-retro-duotone.svg" -}}</span>
+				<span class="inline-block">Hans Ripa</span>
 			</a>
 		</div>
 	</body>

@@ -9,9 +9,6 @@
     "css-loader": "^6.2.0",
     "css-minimizer-webpack-plugin": "^3.0.2",
     "file-loader": "^6.2.0",
-    "html-minifier": "^4.0.0",
-    "less": "^4.1.1",
-    "less-loader": "^10.0.1",
     "mini-css-extract-plugin": "^2.1.0",
     "normalize.css": "^8.0",
     "postcss": "^8.3.6",
@@ -25,8 +22,11 @@
   "scripts": {
     "tmpl": "tmpl",
     "dev": "tmpl -w -- webpack serve --mode=development",
-    "production": "webpack --mode=production && cp _headers dist",
+    "production": "webpack --mode=production && cp -r _headers img dist && tmpl",
     "prettier": "prettier --write *.js *.json *.less",
     "clean": "rm -rf dist .cache index.html .netlify"
+  },
+  "dependencies": {
+    "tailwindcss": "^2.2.19"
   }
 }

@@ -39,19 +39,10 @@ func main() {
 		}
 
 		{
-			cmd := exec.Command("yarn", "tmpl")
-			cmd.Stdout = os.Stdout
-			cmd.Stderr = os.Stderr
-			cmd.Env = append(os.Environ(), "DOMAIN="+site.Domain)
-			if err := cmd.Run(); err != nil {
-				log.Fatal(errors.Wrap(err, "run: yarn tmpl"))
-			}
-		}
-
-		{
 			cmd := exec.Command("yarn", "production")
 			cmd.Stdout = os.Stdout
 			cmd.Stderr = os.Stderr
+			cmd.Env = append(os.Environ(), "DOMAIN="+site.Domain)
 			if err := cmd.Run(); err != nil {
 				log.Fatal(errors.Wrap(err, "run: yarn production"))
 			}

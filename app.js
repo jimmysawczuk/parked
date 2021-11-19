@@ -1,1 +1,2 @@
-import "./style.less"
+// import "./style.less"
+import "./app.css"

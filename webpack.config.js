@@ -41,25 +41,13 @@ const config = {
         ],
       },
       {
-        test: /\.less$/,
+        test: /\.css$/,
         use: [
           {
             loader: MiniCssExtractPlugin.loader,
           },
           { loader: "css-loader" },
           { loader: "postcss-loader" },
-          { loader: "less-loader" },
-        ],
-      },
-      {
-        test: /\.(svg|woff|woff2|eot|ttf)$/,
-        use: [
-          {
-            loader: "file-loader",
-            options: {
-              name: "type/[name].[ext]",
-            },
-          },
         ],
       },
       {
