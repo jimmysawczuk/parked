@@ -3,10 +3,10 @@
   "private": true,
   "devDependencies": {
     "autoprefixer": "^10.4.7",
-    "cssnano": "^5.1.11",
+    "cssnano": "^5.1.12",
     "postcss": "^8.4.14",
     "postcss-cli": "^9.1.0",
-    "prettier": "^2.6.2"
+    "prettier": "^2.7.1"
   },
   "scripts": {
     "tmpl": "tmpl",
@@ -16,6 +16,6 @@
     "clean": "rm -rf dist .cache index.html .netlify"
   },
   "dependencies": {
-    "tailwindcss": "^3.0.24"
+    "tailwindcss": "^3.1.4"
   }
 }
