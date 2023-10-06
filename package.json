@@ -4,7 +4,7 @@
   "devDependencies": {
     "autoprefixer": "^10.4.7",
     "cssnano": "^5.1.12",
-    "postcss": "^8.4.14",
+    "postcss": "^8.4.31",
     "postcss-cli": "^9.1.0",
     "prettier": "^2.7.1"
   },
